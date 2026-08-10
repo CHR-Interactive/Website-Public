@@ -1,0 +1,33 @@
+name: Generate Native Git Submodule
+
+on:
+  workflow_dispatch: # Allows you to manually trigger this loop with a button click
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.DEPLOY_TOKEN }}
+
+      - name: Configure Git Author Profile
+        run: |
+          git config --global user.email "contact@chrinteractive.com"
+          git config --global user.name "CHR Interactive Bot"
+
+      - name: Wipe Existing Submodule Folder Conflicts
+        run: |
+          git rm -rf Website-Private || true
+          rm -rf Website-Private || true
+
+      - name: Force Add True Git Submodule Entry
+        run: |
+          git submodule add https://${{ secrets.DEPLOY_TOKEN }}@://github.com Website-Private
+
+      - name: Push True Arrow Folder to GitHub
+        run: |
+          git add .
+          git commit -m "System: Created official gitlink submodule tracking entry"
+          git push origin main
