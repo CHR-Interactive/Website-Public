@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Submit Your Game — CHR Interactive</title>
+<meta name="description" content="Pitch your game to CHR Interactive. Tell us what you're building and where it's at." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/index-style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" style="text-decoration:none">CHR<span> INTERACTIVE</span></a>
+    <nav class="links">
+      <a href="index.html#what">WHAT WE DO</a>
+      <a href="index.html#process">PROCESS</a>
+      <a href="submit.html">SUBMIT</a>
+      <a href="index.html#community">COMMUNITY</a>
+      <a href="index.html#connect">CONNECT</a>
+    </nav>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="form-intro">
+  <div class="wrap">
+    <h1>SUBMIT YOUR GAME</h1>
+    <p>Tell us what you're building and where it's at. Fields marked <span style="color:var(--accent-2)">*</span> are required. Please skim our <a href="rules.html">submission rules</a> before applying &mdash; you'll confirm you've read them at the bottom.</p>
+  </div>
+</section>
+
+<!-- FORM -->
+<div class="form-wrap">
+  <div class="panel form-card">
+    <form id="submit-form" action="https://api.web3forms.com/submit" method="POST">
+
+      <!-- ============================================================= -->
+      <!-- Web3Forms access key. This is PUBLIC BY DESIGN — it's a        -->
+      <!-- write-only submission ID, not a secret. It can only send a     -->
+      <!-- form to our inbox; it can't read submissions or touch the      -->
+      <!-- account. .env won't help (static site, no server). To protect  -->
+      <!-- against spam, restrict this key to chrinteractive.com in the   -->
+      <!-- Web3Forms dashboard, and rotate it here if it's ever abused.   -->
+      <!-- ============================================================= -->
+      <input type="hidden" name="access_key" value="15c8b189-a18a-4d87-8cb7-1361139aefc4">
+      <input type="hidden" name="subject" value="New Game Submission — CHR Interactive">
+      <input type="hidden" name="from_name" value="CHR Interactive Website">
+      <!-- spam honeypot: bots fill this, humans never see it -->
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+      <!-- ABOUT YOU -->
+      <div class="field">
+        <label class="lbl" for="name">YOUR NAME <span class="req">*</span></label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="email">EMAIL <span class="req">*</span></label>
+        <input type="email" id="email" name="email" required>
+        <div class="hint">We'll reply here, and you'll get a copy of your submission.</div>
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="studio">STUDIO / TEAM NAME</label>
+        <input type="text" id="studio" name="studio">
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="discord">DISCORD USERNAME</label>
+        <input type="text" id="discord" name="discord" placeholder="e.g. yourname#0000 or @yourname">
+      </div>
+
+      <!-- ABOUT THE GAME -->
+      <div class="field">
+        <label class="lbl" for="game_title">GAME TITLE <span class="req">*</span></label>
+        <input type="text" id="game_title" name="game_title" required>
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="genre">GENRE</label>
+        <input type="text" id="genre" name="genre" placeholder="e.g. roguelike, cozy sim, platformer">
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="dev_stage">DEVELOPMENT STAGE <span class="req">*</span></label>
+        <select id="dev_stage" name="dev_stage" required>
+          <option value="" disabled selected>Choose one…</option>
+          <option>Just an idea / concept</option>
+          <option>Prototype</option>
+          <option>Pre-production</option>
+          <option>In production (playable alpha)</option>
+          <option>Beta</option>
+          <option>Near release</option>
+          <option>Already released</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label class="lbl">TARGET PLATFORMS</label>
+        <div class="checks">
+          <label class="check"><input type="checkbox" name="platforms" value="Steam (PC)"> Steam (PC)</label>
+          <label class="check"><input type="checkbox" name="platforms" value="itch.io"> itch.io</label>
+          <label class="check"><input type="checkbox" name="platforms" value="Nintendo Switch"> Nintendo Switch</label>
+          <label class="check"><input type="checkbox" name="platforms" value="PlayStation"> PlayStation</label>
+          <label class="check"><input type="checkbox" name="platforms" value="Xbox"> Xbox</label>
+          <label class="check"><input type="checkbox" name="platforms" value="Mobile"> Mobile</label>
+          <label class="check"><input type="checkbox" name="platforms" value="Web"> Web</label>
+          <label class="check"><input type="checkbox" name="platforms" value="Other / Undecided"> Other / Undecided</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="team_size">TEAM SIZE</label>
+        <input type="text" id="team_size" name="team_size" placeholder="e.g. solo, 3 people">
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="target_release">TARGET RELEASE WINDOW</label>
+        <input type="text" id="target_release" name="target_release" placeholder="e.g. Q3 2026, TBD">
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="pitch">WHAT IS YOUR GAME ABOUT? <span class="req">*</span></label>
+        <textarea id="pitch" name="pitch" required placeholder="Give us the elevator pitch — the hook, the vibe, what makes it special."></textarea>
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="links">LINKS</label>
+        <textarea id="links" name="links" placeholder="Store page, trailer, gameplay video, website, press kit — one per line."></textarea>
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="funding">ARE YOU LOOKING FOR FUNDING?</label>
+        <select id="funding" name="funding">
+          <option value="" disabled selected>Choose one…</option>
+          <option>No — publishing &amp; marketing support only</option>
+          <option>Maybe — open to discussing it</option>
+          <option>Yes — funding is important to us</option>
+        </select>
+      </div>
+
+      <!-- CONSENT / FLAGS -->
+      <div class="field">
+        <label class="single-check">
+          <input type="checkbox" name="nda_interest" value="Yes">
+          <span>I'd like to discuss an NDA before sharing more.</span>
+        </label>
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="notes">ANYTHING ELSE?</label>
+        <textarea id="notes" name="notes" placeholder="Optional — anything else you'd like us to know."></textarea>
+      </div>
+
+      <div class="field">
+        <label class="single-check">
+          <input type="checkbox" name="rules_ack" value="Yes" required>
+          <span>I've read the <a href="rules.html" target="_blank" rel="noopener">submission rules</a> and my game follows them. <span class="req">*</span></span>
+        </label>
+      </div>
+
+      <!-- hCaptcha (enabled in Web3Forms dashboard). Shared Web3Forms site key. -->
+      <div class="field captcha-field">
+        <div class="h-captcha" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2" data-theme="dark"></div>
+      </div>
+
+      <div class="submit-row">
+        <button type="submit" class="btn btn-primary">SUBMIT PITCH</button>
+        <p class="form-status" id="form-status"></p>
+        <p class="hint">Prefer to chat first? <a href="https://discord.gg/XTZpM9Cbn4" target="_blank" rel="noopener">Reach us on Discord</a>.</p>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="connect">
+  <div class="social">
+    <a href="https://discord.gg/XTZpM9Cbn4" target="_blank" rel="noopener">DISCORD</a>
+    <a href="https://steamcommunity.com/groups/chrinteractive" target="_blank" rel="noopener">STEAM</a>
+  </div>
+  <div class="footer-nav">
+    <a href="rules.html">SUBMISSION RULES</a>
+    <a href="privacy.html">PRIVACY POLICY</a>
+  </div>
+  <div class="copy">© 2026 CHR INTERACTIVE — Made with ♥ and too much coffee.</div>
+</footer>
+
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+<script src="js/main.js"></script>
+</body>
+</html>
