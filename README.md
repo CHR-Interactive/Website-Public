@@ -8,7 +8,7 @@ Static HTML/CSS/JS — no build step, no framework. Deployed via GitHub Pages.
 ## Structure
 
 ```
-├── index.html          Home (what we do, process, deal terms, community)
+├── index.html          Home (what we do, process, deal terms, FAQ, community)
 ├── submit.html         Game pitch submission form
 ├── rules.html          Submission guidelines + terms & conditions
 ├── privacy.html        Privacy policy
@@ -16,9 +16,12 @@ Static HTML/CSS/JS — no build step, no framework. Deployed via GitHub Pages.
 ├── css/
 │   └── index-style.css Single stylesheet for every page
 ├── js/
-│   └── main.js         Submission form handling
-├── favicon.png         Tab icon (+ favicon-180.png for mobile)
-└── og-image.png        Social share preview image
+│   ├── main.js         Submission form handling
+│   └── site.js         Site-wide extras (console greeting, Konami easter egg)
+├── images/             Favicon + social share image
+├── robots.txt          Crawler directives (must stay at root)
+├── llms.txt            Site summary for LLM consumers (must stay at root)
+└── sitemap.xml         Sitemap (must stay at root)
 ```
 
 ## Local development
