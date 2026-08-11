@@ -11,14 +11,6 @@ if (form) {
     const status = document.getElementById("form-status");
     const btn = form.querySelector('button[type="submit"]');
 
-    // Require the hCaptcha challenge before sending.
-    const captcha = form.querySelector('textarea[name="h-captcha-response"]');
-    if (!captcha || !captcha.value) {
-      status.textContent = "✗ Please complete the CAPTCHA first.";
-      status.className = "form-status err";
-      return;
-    }
-
     status.textContent = "SENDING…";
     status.className = "form-status sending";
     btn.disabled = true;
@@ -44,10 +36,6 @@ if (form) {
       status.textContent = "✗ Something went wrong. Please try again, or reach us on Discord.";
       status.className = "form-status err";
       btn.disabled = false;
-      // Reset the CAPTCHA so the visitor can try again.
-      if (window.hcaptcha) {
-        try { window.hcaptcha.reset(); } catch (e) {}
-      }
     }
   });
 }
