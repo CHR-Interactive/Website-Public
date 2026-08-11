@@ -1,0 +1,20 @@
+# CHR Interactive
+
+> CHR Interactive is a small indie game publishing group. We help independent developers publish, promote, and support their games — getting them onto storefronts like Steam and itch.io, running marketing, and providing playtesting and funding.
+
+CHR Interactive works with developers under a Marketing & Publishing Agreement: a 70/30 split of net profit (developer keeps 70% after platform cuts), with recoupment on any funding we provide and a termination/abandonment clause for funded projects. NDAs are available on request. Developers pitch their games through the submission form after reviewing the submission rules.
+
+## Pages
+
+- [Home](https://chrinteractive.com/): What we do (publish, promote, support), how the publishing process works, and the deal terms at a glance.
+- [Submit Your Game](https://chrinteractive.com/submit.html): Pitch submission form — developer/game details, development stage, platforms, and pitch.
+- [Submission Rules](https://chrinteractive.com/rules.html): What we look for, what we don't accept, a pre-submission checklist, and the Submission Terms & Conditions.
+- [Privacy Policy](https://chrinteractive.com/privacy.html): How submitted data is collected, used, and kept confidential.
+
+## Contact
+
+- Discord: https://discord.gg/XTZpM9Cbn4
+- Steam group: https://steamcommunity.com/groups/chrinteractive
+- General email: contact@chrinteractive.com
+- Game pitches: pitches@chrinteractive.com
+- Legal & privacy: legal@chrinteractive.com
