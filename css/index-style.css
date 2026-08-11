@@ -337,8 +337,6 @@ section { padding: 50px 0; }
   flex: 0 0 auto;
 }
 
-.captcha-field { display: flex; justify-content: center; }
-
 .submit-row { text-align: center; margin-top: 10px; }
 
 /* Success screen shown after a submission goes through */
