@@ -30,7 +30,7 @@
 </header>
 
 <!-- INTRO -->
-<section class="form-intro">
+<section class="form-intro" id="form-intro">
   <div class="wrap">
     <h1>SUBMIT YOUR GAME</h1>
     <p>Tell us what you're building and where it's at. Fields marked <span style="color:var(--accent-2)">*</span> are required. Please skim our <a href="rules.html">submission rules</a> before applying &mdash; you'll confirm you've read them at the bottom.</p>
@@ -39,7 +39,7 @@
 
 <!-- FORM -->
 <div class="form-wrap">
-  <div class="panel form-card">
+  <div class="panel form-card" id="form-card">
     <form id="submit-form" action="https://api.web3forms.com/submit" method="POST">
 
       <!-- ============================================================= -->
@@ -174,6 +174,17 @@
       </div>
 
     </form>
+  </div>
+
+  <!-- Shown by js/main.js after a successful submission -->
+  <div class="panel submit-success" id="submit-success" hidden>
+    <div class="success-icon">✓</div>
+    <h2>PITCH RECEIVED!</h2>
+    <p>Thanks for pitching your game to CHR Interactive. We read every submission &mdash; if it's a fit, we'll reach out by email, so keep an eye on your inbox.</p>
+    <div class="success-actions">
+      <a class="btn btn-primary" href="index.html">BACK TO HOME</a>
+      <a class="btn btn-secondary" href="https://discord.gg/XTZpM9Cbn4" target="_blank" rel="noopener">JOIN OUR DISCORD</a>
+    </div>
   </div>
 </div>
 

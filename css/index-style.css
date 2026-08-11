@@ -55,6 +55,16 @@ h1, h2, h3, .pixel {
 a { color: var(--accent); text-decoration: none; }
 a:hover { color: var(--accent-3); }
 
+/* ---- Cursor + interaction states ---- */
+a, button, .btn, select, .check, .single-check, input[type="checkbox"] { cursor: pointer; }
+button:disabled, .btn:disabled { cursor: not-allowed; opacity: 0.6; }
+/* clear keyboard-focus outline for accessibility */
+a:focus-visible, button:focus-visible, .btn:focus-visible,
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--accent-3);
+  outline-offset: 2px;
+}
+
 .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
 
 /* ---- Pixel border + hard shadow helper ---- */
@@ -330,6 +340,28 @@ section { padding: 50px 0; }
 .captcha-field { display: flex; justify-content: center; }
 
 .submit-row { text-align: center; margin-top: 10px; }
+
+/* Success screen shown after a submission goes through */
+.submit-success { text-align: center; padding: 56px 30px; }
+.submit-success .success-icon {
+  display: inline-block;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 26px;
+  color: var(--bg);
+  background: var(--accent);
+  padding: 16px 20px;
+  box-shadow: 6px 6px 0 var(--shadow);
+  margin-bottom: 26px;
+}
+.submit-success h2 {
+  font-size: 22px;
+  margin: 0 0 18px;
+  color: var(--ink);
+  text-shadow: 4px 4px 0 var(--accent-2);
+  letter-spacing: 2px;
+}
+.submit-success p { color: var(--ink-dim); max-width: 520px; margin: 0 auto 30px; }
+.success-actions .btn { margin: 6px; }
 .form-status {
   font-family: 'Press Start 2P', monospace;
   font-size: 11px;

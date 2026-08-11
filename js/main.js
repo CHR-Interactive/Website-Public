@@ -24,11 +24,12 @@ if (form) {
       const json = await res.json();
 
       if (json.success) {
-        form.reset();
-        form.style.display = "none";
-        status.textContent = "✓ SUBMITTED! We'll be in touch soon. A copy is on its way to your email.";
-        status.className = "form-status ok";
-        status.scrollIntoView({ behavior: "smooth", block: "center" });
+        // Swap the form out for the success screen.
+        document.getElementById("form-intro")?.remove();
+        document.getElementById("form-card")?.remove();
+        const success = document.getElementById("submit-success");
+        if (success) success.hidden = false;
+        window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         throw new Error(json.message || "submit failed");
       }
