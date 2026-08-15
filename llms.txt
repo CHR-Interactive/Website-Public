@@ -2,7 +2,7 @@
 
 > CHR Interactive is a small indie game publishing group. We help independent developers publish, promote, and support their games — getting them onto storefronts like Steam and itch.io, running marketing, and providing playtesting and funding.
 
-CHR Interactive works with developers under a Marketing & Publishing Agreement: a 70/30 split of net profit (developer keeps 70% after platform cuts), with recoupment on any funding we provide and a termination/abandonment clause for funded projects. NDAs are available on request. Developers pitch their games through the submission form after reviewing the submission rules.
+CHR Interactive works with developers under a Marketing & Publishing Agreement: a 70/30 split of net profit (developer keeps 70% after platform cuts), with recoupment on any funding we provide and a termination/abandonment clause for funded projects. Developers pitch their games through the submission form after reviewing the submission rules.
 
 ## Pages
 
